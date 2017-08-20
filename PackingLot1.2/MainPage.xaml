@@ -1,0 +1,118 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PackingLot1._2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="snow">
+        <!-- Main page_Panorama item 1 #Control -->
+        <phone:Panorama Title="">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="228"/>
+                    <ColumnDefinition Width="228"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="2" Grid.RowSpan="9"  Grid.ColumnSpan="2"  Source="/Images/Parking lot art-09.png" HorizontalAlignment="Center" Margin="-3,-25,8,10" Width="415"/>
+                <Button Name="signin" Content="SIGN IN" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="11" Grid.RowSpan="3" VerticalAlignment="Top" Height="80" Width="400" BorderThickness="2" BorderBrush="#FF35C5EF" Background="Transparent" FontFamily="Global User Interface" FontWeight="Light" Foreground="#FF35C5EF" Click="signin_Click" Margin="10,10,46,0"/>
+                <Button Name="signup" Content="SIGN UP" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="14" Grid.RowSpan="3" VerticalAlignment="Top" Height="80" Width="400" BorderThickness="2" BorderBrush="#FF35C5EF" Background="Transparent" FontFamily="Global User Interface" FontWeight="Light" Foreground="#FF35C5EF" Click="signup_Click" Margin="10,10,46,0"/>
+            </Grid>
+
+            <!-- About Page_Panaroma item 2 -->
+            <phone:PanoramaItem Header="About" Orientation="Horizontal" Foreground="#FF35C5EF">
+                <Grid Width="467">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                        <Grid Height="300">
+                            <StackPanel Orientation="Horizontal" Background="Transparent">
+                                <Grid Height="259">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="70"/>
+                                        <RowDefinition Height="185"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="460"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="/Images/Parking lot art-05.png"  Grid.Row="0" HorizontalAlignment="Left" Margin="0,-10,0,10"  />
+                                    <!-- About ParkingLot in scrollable box -->
+                                    <TextBox Height="auto" Padding="20,0,3,0" Background="#4C0E0B0B" Margin="0,50,-8,-22" Grid.RowSpan="2" />
+                                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
+                                        <TextBlock Text="Park your car smarter and faster with ParkingLot, Uganda's largest and most accurate parking app! Download our free parking app, now available on my PC to find the cheapest, closest parking around! Check out our features:&#xD;&#xA;&#xA;• View informative maps of parking lots and garages in your area.&#xD;&#xA; &#xA;• Check daily and monthly parking rates, see prices laid out on the map and compare costs.&#xD;&#xA;&#xA;• Set our parking timer to help you avoid overstaying, overpaying or getting a ticket.&#xD;&#xA;&#xA;• See real-time info on exactly how many spots are open in a particular garage or lot. (Select markets only)&#xD;&#xA;&#xA;• When you decide on a lot or garage, get directions to the nearest driveway -- not just the street address.&#xD;&#xA;&#xA;* Pay for parking and save money &#xD;&#xA;&#xD;&#xA;Why circle the block wasting gas and time and fraying your nerves? &#xD;&#xA;&#xD;&#xA;Whether you're looking for city parking, sports parking or special event parking, &#xD;&#xA;ParkingLot has it covered. &#xD;&#xA;&#xD;&#xA;Get parking info before you leave the house, or pull over and use the app when you're close to your destination. &#xD;&#xA;&#xD;&#xA;With prices laid out on ParkingLot maps, you can always easily compare parking options. The database at ParkingLot contains parking spots around kampala. &#xD;&#xA;&#xD;&#xA;Can't find parking in your city? Is a rate incorrect? ParkingLot wants to know! We add and update places to park every day. If you have any other suggestions or requests, we'd love to hear from you as well" Foreground="Black" FontSize="22" TextWrapping="Wrap" Height="auto" Width="450" Padding="20,0,3,0" VerticalAlignment="Top"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <!-- Developer Team-->
+                        <TextBlock Text="DEVELOPER TEAM" FontFamily="Microsoft JhengHei UI" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Padding="80,05,05,05" Width="400"/>
+                        <!-- Developer one stackpanel -->
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="10,05,0,0">
+                            <Image Source="/Images/Parking lot art-03.png" Height="100" Width="100" Margin="12,0,0,0"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="02"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="02"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="350"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Adam Mazinga" Grid.Row="1" Foreground="Black" FontSize="30"/>
+                                <TextBlock Text="Index No: MAY15U00068              Tel: 0771629964 Email:mazinga.adam@utamu.ac.ug" Grid.Row="2" Foreground="Black" FontSize="22" TextWrapping="Wrap" Margin="0,2,10,0" Grid.RowSpan="2" />
+                            </Grid>
+                        </StackPanel>
+                        <!-- Developer two stackpanel -->
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="10,0,-28,0">
+                            <Image Source="/Images/Parking lot art-04.png" Height="100" Width="100" Margin="12,0,0,0"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="02"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="120"/>
+                                    <RowDefinition Height="02"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="350"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Sadat Anwar" Grid.Row="1" Foreground="Black" FontSize="30"/>
+                                <TextBlock Text="Index No: MAY15U00068              Tel: 0771629964 Email:mazinga.adam@utamu.ac.ug" Grid.Row="2" Foreground="Black" FontSize="22" TextWrapping="Wrap" />
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+
+    </Grid>
+</phone:PhoneApplicationPage>
